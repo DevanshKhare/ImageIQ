@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreditPage = () => {
   return (
-    <div>CreditPage</div>
+    <div>Credit Page</div>
   )
 }
 
