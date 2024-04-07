@@ -48,9 +48,8 @@ const MobileNav = () => {
                     return (
                       <li
                         key={link.route}
-                        className={`${
-                          isActive && "gradient-text"
-                        } p-18 flex whitespace-nowrap text-dark-700`}
+                        className={`${isActive && "gradient-text"
+                          } p-18 flex whitespace-nowrap text-dark-700`}
                       >
                         <Link
                           className="sidebar-link cursor-pointer"
