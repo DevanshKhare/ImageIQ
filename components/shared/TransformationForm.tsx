@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import React, { useState, useTransition } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import {
@@ -180,6 +180,12 @@ const TransformationForm = ({
     });
   };
 
+  useEffect(() => {
+    if(image && (type === "restore" || type === "removeBackground")){
+      setNewTransformation(transformationType.config)
+    }
+  }, [image, transformationType.config, type])
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
