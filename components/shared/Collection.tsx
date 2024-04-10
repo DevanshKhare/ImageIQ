@@ -25,7 +25,7 @@ export const Collection = ({
   totalPages = 1,
   page,
 }: {
-  images: IImage[];
+  images: any;
   totalPages?: number;
   page: number;
   hasSearch?: boolean;
@@ -55,7 +55,7 @@ export const Collection = ({
 
       {images.length > 0 ? (
         <ul className="collection-list">
-          {images.map((image:any) => (
+          {images.map((image: any) => (
             <Card image={image} key={image._id} />
           ))}
         </ul>
@@ -94,7 +94,7 @@ export const Collection = ({
   );
 };
 
-const Card = ({ image }: { image: IImage }) => {
+const Card = ({ image }: { image: any }) => {
   return (
     <li>
       <Link href={`/transformations/${image._id}`} className="collection-card">
