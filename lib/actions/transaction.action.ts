@@ -1,20 +1,22 @@
 "use server";
-import Stripe from "stripe";
+
 import { redirect } from "next/navigation";
-import { connectToDatabase } from "../database/mongoose";
+import Stripe from "stripe";
 import { handleError } from "../utils";
+import { connectToDatabase } from "../database/mongoose";
 import Transaction from "../database/models/transaction.model";
 import { updateCredits } from "./user.actions";
 
 export async function checkoutCredits(transaction: any) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+  
   const amount = Number(transaction.amout) * 100;
 
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
         price_data: {
-          currency: "inr",
+          currency: 'inr',
           unit_amount: amount,
           product_data: {
             name: transaction.plan,
@@ -28,7 +30,7 @@ export async function checkoutCredits(transaction: any) {
       credits: transaction.credits,
       buyerId: transaction.buyerId,
     },
-    mode: "payment",
+    mode: 'payment',
     success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/profile`,
     cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}`,
   });
