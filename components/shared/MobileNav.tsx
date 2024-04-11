@@ -13,14 +13,15 @@ const MobileNav = () => {
 
   return (
     <header className="header">
-      <Link href="/" className="flex items-center gap-2 md:py-2">
-        <Image
-          src="/assets/images/logo-text.svg"
-          alt="logo"
-          width={180}
-          height={28}
-        />
-      </Link>
+        <Link href="/" className="sidebar-logo">
+          <Image
+            src="/logo3.png"
+            alt="logo"
+            width={35}
+            height={35}
+          />
+          <h2 className="linear-gradient">ImageIQ</h2>
+        </Link>
       <nav className="flex gap-2">
         <SignedIn>
           <UserButton afterSignOutUrl="/" />

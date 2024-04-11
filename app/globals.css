@@ -376,3 +376,18 @@
   font-weight: 600;
   color: #384262;
 }
+
+.linear-gradient{
+  text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .linear-gradient{
+    font-size: 1.5rem;
+  }
+}
