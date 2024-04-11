@@ -23,7 +23,7 @@ export async function checkoutCredits(transaction: any) {
           },
         },
         quantity: 1,
-      },
+      }
     ],
     metadata: {
       plan: transaction.plan,
@@ -32,7 +32,7 @@ export async function checkoutCredits(transaction: any) {
     },
     mode: 'payment',
     success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/profile`,
-    cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}`,
+    cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/`,
   });
 
   redirect(session.url!);
