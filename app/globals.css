@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 100% ;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -81,7 +81,7 @@
 }
 
 .root {
-  @apply flex min-h-screen w-full flex-col bg-white lg:flex-row;
+  @apply flex min-h-screen w-full flex-col bg-[#DDE6ED] lg:flex-row;
 }
 
 .root-container {
@@ -182,6 +182,9 @@
 
   .input-field {
     @apply rounded-[16px] border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
+      background: #e8ebee;
+        box-shadow: inset 13px 13px 26px #b1b8be,
+          inset -13px -13px 26px #ffffff;
   }
 
   .search-field {
@@ -189,7 +192,8 @@
   }
 
   .submit-button {
-    @apply bg-purple-gradient bg-cover rounded-full py-4 px-6 p-16-semibold h-[50px] w-full md:h-[54px];
+    @apply bg-cover rounded-full py-4 px-6 p-16-semibold h-[50px] w-full md:h-[54px] bg-[#27374D];
+    
   }
 
   .select-field {
@@ -222,7 +226,7 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-gradient-to-br from-[#9db2bf] via-[#526d82] to-[#27374d] bg-cover bg-no-repeat p-10 shadow-inner;
   }
 
   .home-heading {
@@ -235,11 +239,14 @@
   }
 
   .credits-item {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-8 shadow-xl shadow-purple-200/20 lg:max-w-none;
+    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-[#DDE6ED] p-8 shadow-xl  lg:max-w-none;
+        background: #DDE6ED;
+          box-shadow: 13px 13px 26px #82888c,
+            -13px -13px 26px #ffffff;
   }
 
   .credits-btn {
-    @apply w-full rounded-full bg-purple-100 bg-cover text-purple-500 hover:text-purple-500;
+    @apply w-full rounded-full bg-purple-100 bg-cover text-[#27374d];
   }
 
   /* Profile Page */
@@ -248,11 +255,11 @@
   }
 
   .profile-balance {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
+    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-[#DDE6ED] p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
   }
 
   .profile-image-manipulation {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
+    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-[#DDE6ED] p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
   }
 
   /* Transformation Details */
@@ -282,7 +289,10 @@
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-[#DDE6ED] p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    background: #DDE6ED;
+      box-shadow: 13px 13px 26px #82888c,
+          -13px -13px 26px #ffffff;
   }
 
   /* MediaUploader Component */
@@ -309,12 +319,15 @@
 
   /* Search Component */
   .search {
-    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 bg-white px-4 shadow-sm shadow-purple-200/15 md:max-w-96;
+    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 bg-[#DDE6ED] px-4 shadow-sm shadow-purple-200/15 md:max-w-96;
+  background: #DDE6ED;
+    box-shadow: inset 13px 13px 26px #b1b8be,
+      inset -13px -13px 26px #ffffff;
   }
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply hidden h-screen w-72 bg-[#DDE6ED] p-5 shadow-md shadow-purple-200/50 lg:flex;
   }
 
   .sidebar-logo {
